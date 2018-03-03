@@ -19,6 +19,25 @@
 
 module.exports.policies = {
 
+  '*': ['isAuthorized'],
+
+ 'UserController': {
+   '*': true
+ },
+
+ 'AuthController': {
+   'login': true,
+ },
+
+ 'CampaignController': {
+   'show':true
+ },
+
+ 'FingerprintController':{
+   'index': true,
+   'conversion': true
+ }
+
   /***************************************************************************
   *                                                                          *
   * Default policy for all controllers and actions (`true` allows public     *

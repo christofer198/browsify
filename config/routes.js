@@ -32,9 +32,21 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  //Auth
+  'post /signup': 'UserController.create',
+  'post /login': 'AuthController.login',
+  'get /current_user': 'AuthController.authenticate',
+
+  //Campaign
+  'post /api/v1/campaign/create': 'CampaignController.create',
+  'get /api/v1/campaign/:id' : 'CampaignController.show',
+  'get /api/v1/campaigns' : 'CampaignController.index',
+
+  //Fingerprint
+  'post /api/v1/fingerprint/:id' : 'FingerprintController.index',
+  'get /api/v1/fingerprints/:id' : 'FingerprintController.show',
+  'get /api/v1/fingerprint/conversion/:id' : 'FingerprintController.conversion',
+
 
   /***************************************************************************
   *                                                                          *

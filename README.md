@@ -1,3 +1,3 @@
-# browserfy
+# browsify
 
 a [Sails](http://sailsjs.org) application
